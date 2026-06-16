@@ -28,14 +28,14 @@
   --font-weight-normal: 400;
   --ring: #C9A84C;
   --radius: 0.625rem;
-  
+
   /* Chart colors */
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  
+
   /* Sidebar */
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
@@ -67,7 +67,7 @@
   --border: oklch(0.269 0 0);
   --input: oklch(0.269 0 0);
   --ring: oklch(0.439 0 0);
-  
+
   --sidebar: oklch(0.205 0 0);
   --sidebar-foreground: oklch(0.985 0 0);
   --sidebar-primary: oklch(0.488 0.243 264.376);
@@ -78,14 +78,25 @@
   --sidebar-ring: oklch(0.439 0 0);
 }
 
-/* ====================== Base Styles ====================== */
+/* ====================== Box Model Reset ====================== */
 
-* {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   border-color: var(--border);
   outline-color: var(--ring);
 }
 
+/* ====================== Base Styles ====================== */
+
+html {
+  font-size: var(--font-size);
+}
+
 body {
+  margin: 0;
+  padding: 0;
   background-color: var(--background);
   color: var(--foreground);
   font-family: 'Inter', system-ui, sans-serif;
@@ -93,21 +104,42 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  margin: 0;
   font-family: 'Poppins', sans-serif;
 }
 
-html {
-  font-size: var(--font-size);
+p, ul, ol, figure {
+  margin: 0;
+  padding: 0;
 }
 
+ul, ol {
+  list-style: none;
+}
 
-/* Typography */
-h1 { font-size: 1.5rem; font-weight: var(--font-weight-medium); line-height: 1.5; }
-h2 { font-size: 1.25rem; font-weight: var(--font-weight-medium); line-height: 1.5; }
+img, video, svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* ====================== Typography ====================== */
+
+h1 { font-size: 1.5rem;   font-weight: var(--font-weight-medium); line-height: 1.5; }
+h2 { font-size: 1.25rem;  font-weight: var(--font-weight-medium); line-height: 1.5; }
 h3 { font-size: 1.125rem; font-weight: var(--font-weight-medium); line-height: 1.5; }
-h4 { font-size: 1rem;    font-weight: var(--font-weight-medium); line-height: 1.5; }
+h4 { font-size: 1rem;     font-weight: var(--font-weight-medium); line-height: 1.5; }
 
-label, button {
+label,
+button {
   font-size: 1rem;
   font-weight: var(--font-weight-medium);
   line-height: 1.5;
@@ -119,7 +151,8 @@ input {
   line-height: 1.5;
 }
 
-/* Radius Helper */
+/* ====================== Utility ====================== */
+
 .rounded-theme {
   border-radius: var(--radius);
 }

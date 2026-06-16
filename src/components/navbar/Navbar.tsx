@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router";
 import styles from "./Navbar.module.css";
 import { Button } from "../ui/button/Button";
+import { navLinks } from "../../constants/NavLinks";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -17,14 +18,7 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "Alumni Directory", path: "/directory" },
-    { name: "Events", path: "/events" },
-    { name: "Jobs Board", path: "/jobs" },
-    { name: "News", path: "/news" },
-    { name: "Alumni Leadership", path: "/leadership" },
-  ];
+
 
   const isHome = location.pathname === "/";
 
@@ -63,11 +57,11 @@ export function Navbar() {
 
         {/* Desktop Actions */}
         <div className={styles.desktopActions}>
-          <Link to="/login">
+          {/* <Link to="/login">
             <Button variant="ghost" className="hidden xl:inline-flex">
               Login
             </Button>
-          </Link>
+          </Link> */}
           <Link to="/login">
             <Button>Join the Network</Button>
           </Link>

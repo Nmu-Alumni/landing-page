@@ -5,6 +5,7 @@ type Variant =
   | "default"
   | "destructive"
   | "outline"
+  | "outlineTeal"
   | "secondary"
   | "ghost"
   | "link";
@@ -44,17 +45,14 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       .filter(Boolean)
       .join(" ");
 
-    // ✅ asChild (NO ref here)
     if (asChild && React.isValidElement(children)) {
       const child = children as React.ReactElement<ChildWithClassName>;
-
       return React.cloneElement(child, {
         className: `${classes} ${child.props.className ?? ""}`.trim(),
         ...props,
       });
     }
 
-    // ✅ Normal button (ref works here)
     return (
       <button className={classes} ref={ref} {...props}>
         {children}
@@ -66,3 +64,4 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 Button.displayName = "Button";
 
 export { Button };
+export type { Variant };
