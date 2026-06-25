@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import styles from "./Hero.module.css";
-import heroBg from '../../../../assets/images/png/home-bacground.jpg'
+import heroBg from "../../../../assets/images/png/home-bacground.jpg";
 import { Button } from "../../../ui/button/Button";
 
 export default function Hero() {
@@ -20,8 +20,9 @@ export default function Hero() {
           Connecting Maritime Leaders Across Generations
         </h1>
         <p className={styles.subheading}>
-          The official alumni network of Nigeria Maritime University — Nigeria's
-          pioneer paramilitary maritime institution. Okerenkoko, Delta State.
+          The official alumni network of Nigeria Maritime University — the first
+          dedicated maritime university in Nigeria and West Africa. Okerenkoko,
+          Delta State.
         </p>
         <div className={styles.cta}>
           <Link to="/login">
