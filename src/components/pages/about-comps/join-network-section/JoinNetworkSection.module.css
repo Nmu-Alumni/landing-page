@@ -1,0 +1,151 @@
+.section {
+  position: relative;
+  overflow: hidden;
+
+  width: 100%;
+  padding: 90px 20px;
+
+  background: #0a2540;
+}
+
+/* Hexagon Background Pattern */
+
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  opacity: .18;
+
+  background-image:
+    radial-gradient(circle at 50% 0%, transparent 22px, rgba(255,255,255,.12) 22px, rgba(255,255,255,.12) 24px, transparent 24px),
+    radial-gradient(circle at 50% 100%, transparent 22px, rgba(255,255,255,.12) 22px, rgba(255,255,255,.12) 24px, transparent 24px),
+    radial-gradient(circle at 0% 50%, transparent 22px, rgba(255,255,255,.12) 22px, rgba(255,255,255,.12) 24px, transparent 24px),
+    radial-gradient(circle at 100% 50%, transparent 22px, rgba(255,255,255,.12) 22px, rgba(255,255,255,.12) 24px, transparent 24px);
+
+  background-size: 48px 42px;
+  pointer-events: none;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.container h2 {
+  margin: 0;
+
+  color: white;
+
+  font-size: 58px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.container p {
+  max-width: 720px;
+
+  margin: 30px auto 45px;
+
+  color: rgba(255,255,255,.9);
+
+  font-size: 22px;
+  line-height: 1.8;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.primary,
+.secondary {
+  height: 56px;
+  padding: 0 34px;
+
+  border-radius: 10px;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: .3s ease;
+}
+
+/* Gold Button */
+
+.primary {
+  border: none;
+
+  background: #d9ae2b;
+
+  color: #082c5b;
+}
+
+.primary:hover {
+  background: #c79b1b;
+  transform: translateY(-2px);
+}
+
+/* Outline Button */
+
+.secondary {
+  background: transparent;
+
+  border: 2px solid rgba(255,255,255,.9);
+
+  color: white;
+}
+
+.secondary:hover {
+  background: white;
+  color: #082c5b;
+}
+
+/* Tablet */
+
+@media (max-width: 992px) {
+
+  .container h2 {
+    font-size: 46px;
+  }
+
+  .container p {
+    font-size: 18px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .section {
+    padding: 70px 20px;
+  }
+
+  .container h2 {
+    font-size: 34px;
+  }
+
+  .container p {
+    font-size: 16px;
+    margin-bottom: 35px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .primary,
+  .secondary {
+    width: 100%;
+    max-width: 340px;
+  }
+}

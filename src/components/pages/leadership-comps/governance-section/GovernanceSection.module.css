@@ -1,0 +1,40 @@
+.section {
+  width: 100%;
+  padding: 100px 20px;
+  background: #ffffff;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.infoCard {
+  background: #edf3fb;
+  border-left: 5px solid #082c5b;
+  border-radius: 16px;
+  padding: 30px 32px;
+  margin-bottom: 70px;
+}
+
+.infoCard p {
+  margin: 0;
+  color: #082c5b;
+  font-size: 20px;
+  line-height: 1.9;
+}
+
+@media (max-width:768px) {
+  .section {
+    padding: 70px 20px;
+  }
+
+  .infoCard {
+    padding: 24px;
+    margin-bottom: 50px;
+  }
+
+  .infoCard p {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,160 @@
+/* ElectionsConstitution.module.css */
+
+.section {
+  background-color: #0a2540;
+ 
+  padding: 64px;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 40px 24px;
+    border-radius: 16px;
+  }
+}
+
+/* ── Watermark ───────────────────────────────────────── */
+
+.watermark {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  opacity: 0.08;
+  pointer-events: none;
+  color: #ffffff;
+}
+
+/* ── Inner content (z-index above watermark) ─────────── */
+
+.inner {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+}
+
+/* ── Badge ───────────────────────────────────────────── */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 999px;
+  margin-bottom: 32px;
+}
+
+.badgeIcon {
+  color: #c9a84c;
+}
+
+/* ── Heading ─────────────────────────────────────────── */
+
+.heading {
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 20px;
+  line-height: 1.2;
+  font-family: "Poppins", "Inter", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 26px;
+  }
+}
+
+/* ── Description ─────────────────────────────────────── */
+
+.description {
+  font-size: 17px;
+  color: #94a3b8;
+  line-height: 1.75;
+  margin: 0 0 36px;
+}
+
+/* ── Cards ───────────────────────────────────────────── */
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 640px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.cardIconTeal {
+  color: #0d9488;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.cardIconGold {
+  color: #c9a84c;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.cardTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 8px;
+}
+
+.cardText {
+  font-size: 13.5px;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.cardLink {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #c9a84c;
+  text-decoration: none;
+}
+
+.cardLink:hover {
+  text-decoration: underline;
+}
+
+/* ── CTA button ──────────────────────────────────────── */
+
+.cta {
+  background-color: #c9a84c;
+  color: #0a2540;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.cta:hover {
+  background-color: #b39340;
+}

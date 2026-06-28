@@ -1,6 +1,9 @@
 
+import AffiliationsSection from "../../components/pages/about-comps/affiliations-section/AffiliationsSection";
 import AimsObjectivesSection from "../../components/pages/about-comps/aims-objectives-section/AimsObjectivesSection";
+import ContactSection from "../../components/pages/about-comps/contact-section/ContactSection";
 import GovernanceStructureSection from "../../components/pages/about-comps/governance-structure-section/GovernanceStructureSection";
+import JoinNetworkSection from "../../components/pages/about-comps/join-network-section/JoinNetworkSection";
 import MembershipCategoriesSection from "../../components/pages/about-comps/membership-categories-section/MembershipCategoriesSection";
 import OurStorySection from "../../components/pages/about-comps/our-story-section/OurStorySection";
 import WhoWeAreSection from "../../components/pages/about-comps/who-we-are-section/WhoWeAreSection";
@@ -19,6 +22,9 @@ const About = () => {
       <AimsObjectivesSection/>
       <MembershipCategoriesSection/>
       <GovernanceStructureSection/>
+      <AffiliationsSection/>
+      <ContactSection/>
+      <JoinNetworkSection/>
     </div>
   );
 };
