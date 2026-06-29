@@ -1,4 +1,4 @@
-import React from "react";
+
 
 const NMUAlumniLogo = ({ width = 420, height = 420 }) => {
   return (
