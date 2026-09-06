@@ -1,11 +1,14 @@
-export interface Event {
+export interface MemberProfile {
   id: string;
+  name: string;
   title: string;
-  date: string;
-  time: string;
-  location: string;
+  profession: string;
+  tenure: string;
   image: string;
-  status: string;
+  driveId?: string;
+  shortBio: string;
+  fullBio: string;
+  category: "executive" | "directors" | "members" | "trustees";
 }
 
 export interface Trustee {
@@ -13,18 +16,18 @@ export interface Trustee {
   name: string;
   title: string;
   profession: string;
+  experience?: string;
   tenure: string;
   image: string;
-  experience?: string;
-  bio?: string;
   isChair?: boolean;
+  bio?: string;
 }
+
 export interface Member {
   id: string;
+  title: string;
   name: string;
-
   profession: string;
-  title: string,
   tenure: string;
   image: string;
 }
