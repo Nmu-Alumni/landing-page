@@ -65,7 +65,7 @@ const ContactSection = () => {
               <div>
                 <h4>Phone</h4>
                 <a href="tel:+234000000000">
-                  +234 (0) — (placeholder)
+                  +234 (0)  (placeholder)
                 </a>
               </div>
             </div>

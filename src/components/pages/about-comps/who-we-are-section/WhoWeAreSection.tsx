@@ -33,7 +33,7 @@ const WhoWeAreSection = () => {
 
           <p className={styles.paragraph}>
             The Nigeria Maritime University Alumni Association (NMUAA) is the
-            official alumni body of Nigeria Maritime University, Okerenkoko —
+            official alumni body of Nigeria Maritime University, Okerenkoko 
             the first dedicated maritime university in Nigeria and West Africa.
             We are a body of Incorporated Trustees, registered under Part F of
             the Companies and Allied Matters Act, 2020 (CAMA), operating as a
@@ -42,7 +42,7 @@ const WhoWeAreSection = () => {
           </p>
 
           <p className={styles.paragraph}>
-            Our membership spans graduates across all faculties of NMU — from
+            Our membership spans graduates across all faculties of NMU from
             Marine Engineering and Naval Architecture to Maritime Law,
             Environmental Science, and Transport & Logistics. We also welcome
             former academic and administrative staff of the university as

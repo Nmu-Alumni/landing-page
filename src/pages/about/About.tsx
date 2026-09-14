@@ -14,7 +14,7 @@ const About = () => {
     <div>
       <HeroSection
         title="About the Nigeria Maritime University Alumni Association"
-        subtitle="The official alumni network of Nigeria's first dedicated maritime university — connecting graduates, advancing Nigeria's blue economy, and upholding our maritime legacy."
+        subtitle="The official alumni network of Nigeria's first dedicated maritime university  connecting graduates, advancing Nigeria's blue economy, and upholding our maritime legacy."
         iconColor="#C9A84C"
       />
       <WhoWeAreSection/>
