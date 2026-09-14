@@ -6,7 +6,7 @@ import facebookIcon from "../../assets/images/svg/facebook-icon.svg";
 import instaIcon from "../../assets/images/svg/inst-icon.svg";
 import flindlnIcon from "../../assets/images/svg/linkdkn.svg";
 import xIcon from "../../assets/images/svg/twitter-icon.svg";
-import logo from "../../assets/images/png/logo.png";
+import logo from "../../assets/images/svg/logo-white.png";
 
 export function Footer() {
   return (
@@ -20,8 +20,6 @@ export function Footer() {
                 <img src={logo} alt="" />
               </div>
             </Link>
-
-            <p className={styles.tagline}>"In Pursuit of Excellence"</p>
 
             <p className={styles.description}>
               Nigeria Maritime University, Okerenkoko. The pioneer paramilitary

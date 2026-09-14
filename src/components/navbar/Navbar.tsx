@@ -1,4 +1,5 @@
-import { Anchor, Menu, X } from "lucide-react";
+import {  Menu, X } from "lucide-react";
+import logo from '../../assets/images/svg/Asset 7@2x.png'
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router";
 import styles from "./Navbar.module.css";
@@ -31,13 +32,7 @@ export function Navbar() {
       <div className={styles.container}>
         {/* Logo */}
         <Link to="/" className={styles.logo}>
-          <div className={styles.logoIcon}>
-            <Anchor size={24} />
-          </div>
-          <div className={styles.logoText}>
-            <span className={styles.logoMain}>NMU</span>
-            <span className={styles.logoSub}>ALUMNI NETWORK</span>
-          </div>
+          <img src={logo} alt="" />
         </Link>
 
         {/* Desktop Navigation */}
