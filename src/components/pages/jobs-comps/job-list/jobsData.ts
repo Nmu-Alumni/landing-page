@@ -1,0 +1,108 @@
+import type { JobListing } from "../../../../types";
+
+export const JOBS: JobListing[] = [
+  {
+    id: "1",
+    title: "Terminal Operations Officer",
+    company: "Apapa Port Complex",
+    location: "Lagos, Nigeria",
+    type: "Full-time",
+    category: "Marine Economics",
+    description:
+      "Oversee daily terminal operations, coordinate vessel scheduling, and liaise with shipping agents to optimize cargo throughput.",
+    applyEmail: "careers@apapaport.example.com",
+    postedBy: "NMU Alumni Careers Desk",
+    postedDate: "Sep 1, 2026",
+  },
+  {
+    id: "2",
+    title: "Marine Superintendent",
+    company: "Maersk Line",
+    location: "Rotterdam, Netherlands",
+    type: "Full-time",
+    category: "Marine Engineering",
+    description:
+      "Ensure fleet compliance with safety and environmental regulations, and support technical audits across a portfolio of vessels.",
+    applyLink: "https://www.maersk.com/careers",
+    postedBy: "Engr. Musa Ibrahim ('20)",
+    postedDate: "Aug 28, 2026",
+  },
+  {
+    id: "3",
+    title: "Junior Deck Officer",
+    company: "West Africa–Europe Container Line",
+    location: "Warri, Nigeria",
+    type: "Full-time",
+    category: "Nautical Science",
+    description:
+      "Entry-level watchkeeping role for recently certified deck officers. STCW II/1 required. Sea-time placement support provided.",
+    applyEmail: "hr@waeuroline.example.com",
+    postedBy: "NMU Alumni Careers Desk",
+    postedDate: "Aug 20, 2026",
+  },
+  {
+    id: "4",
+    title: "Logistics Coordinator",
+    company: "MSC Nigeria",
+    location: "Port Harcourt, Nigeria",
+    type: "Full-time",
+    category: "Maritime Transport & Logistics",
+    description:
+      "Coordinate inbound and outbound freight schedules, manage documentation, and support client relationship management.",
+    applyEmail: "recruitment@mscnigeria.example.com",
+    postedBy: "Chioma Nwafor ('22)",
+    postedDate: "Aug 15, 2026",
+  },
+  {
+    id: "5",
+    title: "Climate Data Intern",
+    company: "NIMET",
+    location: "Abuja, Nigeria",
+    type: "Internship",
+    category: "Meteorology",
+    description:
+      "Six-month internship supporting the Climate Resilience Task Force with data collection and forecasting model validation.",
+    applyEmail: "internships@nimet.example.gov.ng",
+    postedBy: "NMU Alumni Careers Desk",
+    postedDate: "Aug 10, 2026",
+  },
+  {
+    id: "6",
+    title: "Naval Architecture Graduate Trainee",
+    company: "Damen Shipyards",
+    location: "Lagos, Nigeria",
+    type: "Full-time",
+    category: "Naval Architecture",
+    description:
+      "12-month graduate programme rotating through hull design, structural analysis, and production engineering teams.",
+    applyLink: "https://www.damen.com/careers",
+    postedBy: "Femi Adeyemi ('21)",
+    postedDate: "Aug 5, 2026",
+  },
+  {
+    id: "7",
+    title: "Aquaculture Field Officer (Contract)",
+    company: "Federal Department of Fisheries",
+    location: "Calabar, Nigeria",
+    type: "Contract",
+    category: "Fisheries & Aquaculture",
+    description:
+      "9-month contract supporting coastal fish farming cooperatives with sustainable aquaculture best practices.",
+    applyEmail: "recruitment@fisheries.example.gov.ng",
+    postedBy: "Grace Nnadi ('19)",
+    postedDate: "Jul 30, 2026",
+  },
+  {
+    id: "8",
+    title: "Rig Engineer",
+    company: "Seplat Energy",
+    location: "Warri, Nigeria",
+    type: "Full-time",
+    category: "Marine Engineering",
+    description:
+      "Support offshore rig maintenance and inspection programmes, ensuring compliance with NUPRC safety standards.",
+    applyEmail: "careers@seplatenergy.example.com",
+    postedBy: "Seun Adeleke ('22)",
+    postedDate: "Jul 22, 2026",
+  },
+];

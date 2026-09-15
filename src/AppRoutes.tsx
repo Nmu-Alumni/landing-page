@@ -8,10 +8,26 @@ import Events from "./pages/events/Events";
 import NotFound from "./pages/not-found/NotFound";
 import MembersPage from "./pages/members-page/MembersPage";
 import MemberDetailPage from "./pages/member-detail-page/MemberDetailPage";
+import News from "./pages/news/News";
+import NewsDetail from "./pages/news-detail/NewsDetail";
+import Gallery from "./pages/gallery/Gallery";
+import Register from "./pages/register/Register";
+import Login from "./pages/login/Login";
+import Profile from "./pages/profile/Profile";
+import Mentorship from "./pages/mentorship/Mentorship";
+import Directory from "./pages/directory/Directory";
+import Jobs from "./pages/jobs/Jobs";
+import BusinessDirectory from "./pages/business-directory/BusinessDirectory";
+import BusinessDetail from "./pages/business-detail/BusinessDetail";
+import ProtectedRoute from "./components/protected-route/ProtectedRoute";
 
 const AppRoutes = () => {
   return (
     <Routes>
+      {/* Standalone pages — no Navbar/Footer */}
+      <Route path="/register" element={<Register />} />
+      <Route path="/login" element={<Login />} />
+
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -21,6 +37,25 @@ const AppRoutes = () => {
 
         {/* Single member detail */}
         <Route path="/leadership/:id" element={<MemberDetailPage />} />
+
+        <Route path="/news" element={<News />} />
+        <Route path="/news/:id" element={<NewsDetail />} />
+        <Route path="/gallery" element={<Gallery />} />
+
+        <Route
+          path="/profile"
+          element={
+            <ProtectedRoute>
+              <Profile />
+            </ProtectedRoute>
+          }
+        />
+        <Route path="/mentorship" element={<Mentorship />} />
+        <Route path="/directory" element={<Directory />} />
+        <Route path="/jobs" element={<Jobs />} />
+        <Route path="/business-directory" element={<BusinessDirectory />} />
+        <Route path="/business-directory/:id" element={<BusinessDetail />} />
+
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

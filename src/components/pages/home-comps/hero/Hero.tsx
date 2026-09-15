@@ -25,7 +25,7 @@ export default function Hero() {
           Delta State.
         </p>
         <div className={styles.cta}>
-          <Link to="/login">
+          <Link to="/register">
             <Button size="lg" className={styles.btnPrimary}>
               Join the Network
             </Button>

@@ -42,8 +42,13 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="#" className={styles.link}>
+                <Link to="/jobs" className={styles.link}>
                   Jobs Board
+                </Link>
+              </li>
+              <li>
+                <Link to="/business-directory" className={styles.link}>
+                  Business Directory
                 </Link>
               </li>
               <li>
@@ -52,8 +57,13 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="#" className={styles.link}>
+                <Link to="/news" className={styles.link}>
                   News & Blog
+                </Link>
+              </li>
+              <li>
+                <Link to="/gallery" className={styles.link}>
+                  Photo Gallery
                 </Link>
               </li>
             </ul>
@@ -69,7 +79,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="#" className={styles.link}>
+                <Link to="/mentorship" className={styles.link}>
                   Mentorship Program
                 </Link>
               </li>

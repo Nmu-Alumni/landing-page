@@ -1,0 +1,88 @@
+import type { GalleryImage } from "../../../../types";
+
+export const GALLERY: GalleryImage[] = [
+  {
+    id: "1",
+    src: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1000&q=80",
+    caption: "Cadets collaborating on a group project in the library",
+    category: "Campus Life",
+    date: "Mar 2026",
+  },
+  {
+    id: "2",
+    src: "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=1000&q=80",
+    caption: "A maritime law lecture in session",
+    category: "Campus Life",
+    date: "Feb 2026",
+  },
+  {
+    id: "3",
+    src: "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=1000&q=80",
+    caption: "Cadets researching in the campus library",
+    category: "Campus Life",
+    date: "Mar 2026",
+  },
+  {
+    id: "4",
+    src: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1000&q=80",
+    caption: "Class of 2016 alumni catching up at the ten-year reunion",
+    category: "Reunions",
+    date: "Nov 2025",
+  },
+  {
+    id: "5",
+    src: "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1000&q=80",
+    caption: "Inter-house cycling race, founders' week sports gala",
+    category: "Sports",
+    date: "Apr 2026",
+  },
+  {
+    id: "6",
+    src: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1000&q=80",
+    caption: "Graduates tossing their caps at the close of convocation",
+    category: "Graduation",
+    date: "Dec 2025",
+  },
+  {
+    id: "7",
+    src: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1000&q=80",
+    caption: "Alumni networking mixer at the Maritime Career Fair",
+    category: "Events",
+    date: "Nov 2025",
+  },
+  {
+    id: "8",
+    src: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=1000&q=80",
+    caption: "Guest industry talk during Alumni Career Week",
+    category: "Events",
+    date: "Jan 2026",
+  },
+  {
+    id: "9",
+    src: "https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=1000&q=80",
+    caption: "Swimming finals at the founders' week sports gala",
+    category: "Sports",
+    date: "Apr 2026",
+  },
+  {
+    id: "10",
+    src: "https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?auto=format&fit=crop&w=1000&q=80",
+    caption: "The main campus building decorated for convocation week",
+    category: "Graduation",
+    date: "Dec 2025",
+  },
+  {
+    id: "11",
+    src: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1000&q=80",
+    caption: "Panel discussion at the Delta Waterways Forum",
+    category: "Events",
+    date: "Dec 2025",
+  },
+  {
+    id: "12",
+    src: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1000&q=80",
+    caption: "Marine engineering seminar in the campus lecture hall",
+    category: "Campus Life",
+    date: "Feb 2026",
+  },
+];

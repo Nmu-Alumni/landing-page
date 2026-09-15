@@ -1,0 +1,270 @@
+.page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 960px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+}
+
+.formCol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  background: var(--card);
+}
+
+.formWrap {
+  width: 100%;
+  max-width: 440px;
+}
+
+.logoLink {
+  display: inline-block;
+  margin-bottom: 2.5rem;
+}
+
+.logoLink img {
+  height: 28px;
+  width: auto;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  color: var(--muted-foreground);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* ---------- stepper ---------- */
+.stepper {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2.25rem;
+}
+
+.stepItem {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  position: relative;
+}
+
+.stepItem:last-child {
+  flex: 0;
+}
+
+.stepCircle {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--background);
+  border: 2px solid var(--muted);
+  color: var(--muted-foreground);
+  display: grid;
+  place-items: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  transition: all 0.25s ease;
+}
+
+.stepCircle.stepActive {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--primary);
+}
+
+.stepCircle.stepDone {
+  border-color: var(--teal);
+  background: var(--teal);
+  color: #fff;
+}
+
+.stepLabel {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 90px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--muted-foreground);
+  line-height: 1.3;
+}
+
+.stepLabel.stepActive,
+.stepLabel.stepDone {
+  color: var(--foreground);
+}
+
+.stepLine {
+  flex: 1;
+  height: 2px;
+  background: var(--muted);
+  margin: 0 0.4rem;
+  transition: background 0.25s ease;
+}
+
+.stepLineDone {
+  background: var(--teal);
+}
+
+/* ---------- form ---------- */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1.75rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.field label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.inputWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 14px;
+  color: var(--muted-foreground);
+  pointer-events: none;
+}
+
+.inputWrap input,
+.inputWrap select {
+  width: 100%;
+  padding: 0.85rem 1rem 0.85rem 2.6rem;
+  border: 1.5px solid var(--muted);
+  border-radius: 12px;
+  font-size: 0.95rem;
+  background: var(--background);
+  color: var(--foreground);
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.noIconSelect {
+  padding-left: 1rem !important;
+}
+
+.inputWrap input:focus,
+.inputWrap select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(201, 168, 76, 0.15);
+  background: var(--card);
+}
+
+.error {
+  font-size: 0.85rem;
+  color: var(--destructive);
+  background: rgba(212, 24, 61, 0.08);
+  border: 1px solid rgba(212, 24, 61, 0.25);
+  padding: 0.7rem 0.9rem;
+  border-radius: 10px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: transparent;
+  border: 1.5px solid var(--muted);
+  color: var(--foreground);
+  padding: 0.85rem 1.3rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.backBtn:hover {
+  border-color: var(--foreground);
+}
+
+.nextBtn {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.6rem;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  border: none;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.nextBtn:hover {
+  box-shadow: 0 8px 20px rgba(10, 37, 64, 0.25);
+  transform: translateY(-1px);
+}
+
+.footerText {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted-foreground);
+}
+
+.link {
+  color: var(--teal);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .stepLabel {
+    width: 70px;
+    font-size: 0.62rem;
+  }
+}

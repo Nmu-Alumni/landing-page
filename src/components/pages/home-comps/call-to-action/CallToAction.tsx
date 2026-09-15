@@ -15,7 +15,7 @@ export default function CallToAction() {
           Join thousands of NMU graduates shaping the oceans, ports, and
           waterways of tomorrow.
         </p>
-        <Link to="/login">
+        <Link to="/register">
           <Button size="lg" className={styles.btn}>
             Sign Up Now — It's Free
           </Button>
