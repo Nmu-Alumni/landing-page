@@ -170,4 +170,15 @@
   .imgWrap {
     min-height: 220px;
   }
+
+  .tabs {
+    width: 100%;
+  }
+
+  .tab {
+    flex: 1;
+    text-align: center;
+    padding: 0.6rem 0.5rem;
+    font-size: 0.78rem;
+  }
 }

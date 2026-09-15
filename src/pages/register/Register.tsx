@@ -106,6 +106,7 @@ const Register = () => {
           <ol className={styles.stepper}>
             {STEPS.map((label, i) => {
               const stepNum = i + 1;
+              const isLast = stepNum === STEPS.length;
               const state =
                 stepNum < step
                   ? styles.stepDone
@@ -117,7 +118,11 @@ const Register = () => {
                   <div className={`${styles.stepCircle} ${state}`}>
                     {stepNum < step ? <Check size={15} /> : stepNum}
                   </div>
-                  <span className={`${styles.stepLabel} ${state}`}>
+                  <span
+                    className={`${styles.stepLabel} ${
+                      isLast ? styles.stepLabelLast : ""
+                    } ${state}`}
+                  >
                     {label}
                   </span>
                   {stepNum < STEPS.length && (

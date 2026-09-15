@@ -1,6 +1,6 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { X } from "lucide-react";
+import { ChevronLeft, ChevronRight, Filter, X } from "lucide-react";
 import styles from "./Mentorship.module.css";
 import MentorCard from "../../components/pages/mentorship-comps/mentor-card/MentorCard";
 import { MENTORS } from "../../components/pages/mentorship-comps/mentor-list/mentorsData";
@@ -44,6 +44,10 @@ const Mentorship = () => {
   const [message, setMessage] = useState("");
   const [sentIds, setSentIds] = useState<string[]>([]);
 
+  const tabsRef = useRef<HTMLDivElement>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
+
   const allMentors = useMemo(() => {
     const memberMentors = getMentorUsers()
       .filter((m) => m.id !== user?.id)
@@ -55,6 +59,31 @@ const Mentorship = () => {
     if (discipline === "all") return allMentors;
     return allMentors.filter((m) => m.discipline === discipline);
   }, [allMentors, discipline]);
+
+  const disciplineCounts = useMemo(() => {
+    const counts: Record<string, number> = { all: allMentors.length };
+    DISCIPLINES.forEach((d) => {
+      counts[d] = allMentors.filter((m) => m.discipline === d).length;
+    });
+    return counts;
+  }, [allMentors]);
+
+  const updateScrollFades = () => {
+    const el = tabsRef.current;
+    if (!el) return;
+    setCanScrollLeft(el.scrollLeft > 4);
+    setCanScrollRight(el.scrollLeft + el.clientWidth < el.scrollWidth - 4);
+  };
+
+  const scrollTabsBy = (amount: number) => {
+    tabsRef.current?.scrollBy({ left: amount, behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    updateScrollFades();
+    window.addEventListener("resize", updateScrollFades);
+    return () => window.removeEventListener("resize", updateScrollFades);
+  }, [allMentors]);
 
   const handleRequestClick = (mentor: MentorProfile) => {
     if (!isAuthenticated) {
@@ -100,23 +129,62 @@ const Mentorship = () => {
 
       <div className={styles.controls}>
         <div className={styles.controlsInner}>
-          <button
-            type="button"
-            className={`${styles.tab} ${discipline === "all" ? styles.tabActive : ""}`}
-            onClick={() => setDiscipline("all")}
-          >
-            All Disciplines
-          </button>
-          {DISCIPLINES.map((d) => (
-            <button
-              key={d}
-              type="button"
-              className={`${styles.tab} ${discipline === d ? styles.tabActive : ""}`}
-              onClick={() => setDiscipline(d)}
+          <span className={styles.filterLabel}>
+            <Filter size={15} />
+            <span className={styles.filterLabelText}>Filter</span>
+          </span>
+
+          <div className={styles.tabsScroll}>
+            {canScrollLeft && (
+              <button
+                type="button"
+                className={`${styles.scrollBtn} ${styles.scrollBtnLeft}`}
+                onClick={() => scrollTabsBy(-220)}
+                aria-label="Scroll filters left"
+              >
+                <ChevronLeft size={16} />
+              </button>
+            )}
+            <div
+              className={styles.tabsRow}
+              ref={tabsRef}
+              onScroll={updateScrollFades}
             >
-              {d}
-            </button>
-          ))}
+              <button
+                type="button"
+                className={`${styles.tab} ${
+                  discipline === "all" ? styles.tabActive : ""
+                }`}
+                onClick={() => setDiscipline("all")}
+              >
+                All Disciplines
+                <span className={styles.count}>{disciplineCounts.all}</span>
+              </button>
+              {DISCIPLINES.map((d) => (
+                <button
+                  key={d}
+                  type="button"
+                  className={`${styles.tab} ${
+                    discipline === d ? styles.tabActive : ""
+                  }`}
+                  onClick={() => setDiscipline(d)}
+                >
+                  {d}
+                  <span className={styles.count}>{disciplineCounts[d]}</span>
+                </button>
+              ))}
+            </div>
+            {canScrollRight && (
+              <button
+                type="button"
+                className={`${styles.scrollBtn} ${styles.scrollBtnRight}`}
+                onClick={() => scrollTabsBy(220)}
+                aria-label="Scroll filters right"
+              >
+                <ChevronRight size={16} />
+              </button>
+            )}
+          </div>
         </div>
       </div>
 
