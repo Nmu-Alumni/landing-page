@@ -3,22 +3,57 @@
   min-height: 100vh;
   background: #f7f6f2;
   color: #0a1628;
+  overflow-x: hidden;
 }
 
 /* ========== HERO ========== */
 .hero {
+  position: relative;
   background: linear-gradient(145deg, #0a1628 0%, #162a4a 55%, #1e3a5f 100%);
   color: #fff;
-  /* Top padding clears the fixed navbar (~68-90px tall) so the badge/heading
-     never sit underneath it. */
   padding: 6.5rem max(1.5rem, env(safe-area-inset-right)) 3.25rem
     max(1.5rem, env(safe-area-inset-left));
   text-align: center;
+  overflow: hidden;
+}
+
+.blob1,
+.blob2 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.35;
+  pointer-events: none;
+  animation: float 12s ease-in-out infinite;
+}
+
+.blob1 {
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, #c9a84c, transparent 70%);
+  top: -100px;
+  left: -80px;
+}
+
+.blob2 {
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, #3d6fb0, transparent 70%);
+  bottom: -120px;
+  right: -60px;
+  animation-delay: -6s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(20px, -25px) scale(1.08); }
 }
 
 .heroInner {
+  position: relative;
   max-width: 720px;
   margin: 0 auto;
+  animation: fadeInUp 0.7s ease both;
 }
 
 .badge {
@@ -50,12 +85,101 @@
   margin: 0;
 }
 
+/* ========== SPOTLIGHT ========== */
+.spotlightSection {
+  background: #0a1628;
+  padding: 0 0 3.5rem;
+}
+
+.spotlightHeading {
+  color: #fff;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin: 0 0 1.75rem;
+}
+
+.spotlightGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.spotlightCard {
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  padding: 1.75rem 1rem 1.5rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+  animation: fadeInUp 0.6s ease both;
+  animation-delay: calc(var(--i, 0) * 120ms);
+}
+
+.spotlightCard:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(201, 168, 76, 0.4);
+}
+
+.spotlightRing {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  padding: 3px;
+  background: conic-gradient(from 0deg, #c9a84c, #f4e2a1, #c9a84c);
+  transition: transform 0.4s ease;
+}
+
+.spotlightCard:hover .spotlightRing {
+  transform: rotate(20deg) scale(1.05);
+}
+
+.spotlightImg {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #0a1628;
+}
+
+.spotlightCard h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 0.2rem;
+}
+
+.spotlightTitle {
+  font-size: 0.82rem;
+  color: #c9a84c;
+  margin: 0 0 0.6rem;
+  font-weight: 600;
+}
+
+.spotlightCta {
+  font-size: 0.78rem;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.spotlightCard:hover .spotlightCta {
+  opacity: 1;
+}
+
 /* ========== CONTROLS ========== */
 .controls {
   background: #fff;
   border-bottom: 1px solid #e8e6e0;
   position: sticky;
-  /* If your site header is fixed, set this to the header height, e.g. 72px */
   top: 0;
   z-index: 20;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
@@ -72,7 +196,6 @@
   align-items: center;
 }
 
-/* Search */
 .searchWrap {
   position: relative;
   flex: 1 1 260px;
@@ -127,43 +250,55 @@
   color: #555;
   display: grid;
   place-items: center;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .clearBtn:hover {
   background: #ccc;
+  transform: translateY(-50%) rotate(90deg);
 }
 
-/* Tabs */
+/* Tabs with sliding indicator */
 .tabs {
+  position: relative;
   display: flex;
   gap: 0.4rem;
   flex-wrap: wrap;
+  background: #f4f2ec;
+  padding: 0.3rem;
+  border-radius: 999px;
+}
+
+.tabIndicator {
+  position: absolute;
+  top: 0.3rem;
+  left: 0;
+  height: calc(100% - 0.6rem);
+  background: #0a1628;
+  border-radius: 999px;
+  transition: transform 0.35s cubic-bezier(0.65, 0, 0.35, 1), width 0.35s cubic-bezier(0.65, 0, 0.35, 1);
+  z-index: 0;
 }
 
 .tab {
+  position: relative;
+  z-index: 1;
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
   padding: 0.55rem 0.95rem;
-  border: 1px solid #e0ddd6;
+  border: none;
   border-radius: 999px;
-  background: #fff;
+  background: transparent;
   font-size: 0.85rem;
   font-weight: 500;
   color: #444;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: color 0.25s ease;
   white-space: nowrap;
 }
 
-.tab:hover {
-  border-color: #c9a84c;
-  color: #0a1628;
-}
-
 .tabActive {
-  background: #0a1628;
-  border-color: #0a1628;
   color: #fff;
 }
 
@@ -172,21 +307,14 @@
   color: #c9a84c;
 }
 
-.tabLabelFull {
-  display: inline;
-}
-
-.tabLabelShort {
-  display: none;
-}
-
 .count {
   font-size: 0.72rem;
   font-weight: 600;
-  background: #f0eee8;
+  background: #e6e3da;
   color: #666;
   padding: 0.15rem 0.45rem;
   border-radius: 999px;
+  transition: background 0.25s ease, color 0.25s ease;
 }
 
 /* Sort */
@@ -210,6 +338,7 @@
   font-size: 1rem;
   background: #fff;
   cursor: pointer;
+  transition: border-color 0.2s ease;
 }
 
 .select:focus {
@@ -249,6 +378,23 @@
   gap: 1.5rem;
 }
 
+/* Staggered entrance, only fires once grid scrolls into view */
+.grid.gridVisible .card {
+  animation: fadeInUp 0.55s cubic-bezier(0.2, 0.7, 0.3, 1) both;
+  animation-delay: calc(var(--i, 0) * 55ms);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* ========== CARD ========== */
 .card {
   background: #fff;
@@ -260,7 +406,8 @@
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
   display: flex;
   flex-direction: column;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  will-change: transform;
 }
 
 .imageWrapper {
@@ -274,7 +421,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
+  transition: transform 0.5s ease;
 }
 
 .cardBadge {
@@ -341,17 +488,19 @@
   font-weight: 600;
   color: #0a1628;
   margin-top: auto;
+  transition: color 0.2s ease;
 }
 
 /* Hover only for mouse / trackpad */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.1);
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(10, 22, 40, 0.12);
+    border-color: rgba(201, 168, 76, 0.4);
   }
 
   .card:hover .image {
-    transform: scale(1.06);
+    transform: scale(1.08);
   }
 
   .card:hover .cta {
@@ -364,6 +513,7 @@
   text-align: center;
   padding: 4rem 1rem;
   color: #666;
+  animation: fadeInUp 0.4s ease both;
 }
 
 .empty button {
@@ -375,10 +525,12 @@
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
 }
 
 .empty button:hover {
   background: #162a4a;
+  transform: translateY(-2px);
 }
 
 /* ========== RESPONSIVE ========== */
@@ -386,6 +538,16 @@
   .hero {
     padding-top: 6rem;
     padding-bottom: 2.5rem;
+  }
+
+  .spotlightGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.9rem;
+  }
+
+  .spotlightRing {
+    width: 76px;
+    height: 76px;
   }
 }
 
@@ -416,7 +578,6 @@
   .tabs {
     overflow-x: auto;
     flex-wrap: nowrap;
-    padding-bottom: 0.15rem;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
   }
@@ -427,14 +588,6 @@
 
   .tab {
     flex: 0 0 auto;
-  }
-
-  .tabLabelFull {
-    display: none;
-  }
-
-  .tabLabelShort {
-    display: inline;
   }
 
   .grid {
@@ -462,6 +615,18 @@
     font-size: 0.62rem;
     padding: 0.22rem 0.45rem;
   }
+
+  .spotlightHeading {
+    font-size: 0.85rem;
+  }
+
+  .spotlightCard h3 {
+    font-size: 0.85rem;
+  }
+
+  .spotlightTitle {
+    font-size: 0.72rem;
+  }
 }
 
 @media (max-width: 420px) {
@@ -475,5 +640,28 @@
 
   .hero p {
     font-size: 0.98rem;
+  }
+
+  .spotlightRing {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .blob1,
+  .blob2,
+  .heroInner,
+  .spotlightCard,
+  .grid.gridVisible .card,
+  .empty {
+    animation: none !important;
+  }
+
+  .card,
+  .spotlightCard,
+  .tabIndicator {
+    transition: none !important;
   }
 }

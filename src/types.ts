@@ -6,6 +6,7 @@ export interface MemberProfile {
   tenure: string;
   image: string;
   driveId?: string;
+  rank?: string;
   shortBio: string;
   fullBio: string;
   category: "executive" | "directors" | "members" | "trustees";
