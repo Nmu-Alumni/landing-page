@@ -17,6 +17,7 @@ import Chidimma from "../assets/images/png/directors/Chidimma Ezekwe.jpeg";
 import confidence from "../assets/images/png/directors/confidence.jpeg";
 import lloyd from "../assets/images/png/directors/lloyd.png";
 import joshua from "../assets/images/png/directors/omeonu joshua.png";
+import anuoluwapo from "../assets/images/png/directors/Anuoluwapo Enitan Popoola.jpeg";
 import type { MemberProfile } from "../types";
 
 /**
@@ -98,13 +99,27 @@ export const allMembers: MemberProfile[] = [
     image: abraham,
     rank: "5",
     shortBio:
-      "Maritime Officer, entrepreneur, and marine logistics professional. Serves as Assistant Secretary of the NMU Pioneer Alumni Association and Founder of O'Nelsons Marine Consulting Services.",
+      "Pioneer graduate of Port Management. Founder of O'Nelsons Marine Consulting Services and Assistant Secretary of the NMU Pioneer Alumni Association.",
     fullBio:
-      "Odianosen Abraham Nelson is a graduate of Port Management and an experienced maritime professional with practical exposure to vessel fastening, cargo operations, and marine logistics services. He is the Founder and Managing Lead of O'Nelsons Marine Consulting Services, a company focused on vessel sales and hire, container sales and leasing, tugboat and barge charter services, houseboat sales, and marine equipment disposal solutions.\nBeyond his professional engagements, he is committed to leadership, youth development, and strengthening the network of graduates from the Nigerian Maritime University. As the Assistant Secretary of the NMU Pioneer Alumni Association, he contributes to administrative coordination, stakeholder engagement, and initiatives aimed at promoting the welfare and advancement of alumni members.\nHe is passionate about excellence, integrity, continuous learning, and the growth of Nigeria's maritime industry.",
+      "Odianosen Abraham Nelson is a Pioneer Graduate of Port Management from the Nigerian Maritime University (NMU), Okerenkoko, and a maritime professional with practical exposure to vessel operations, vessel fastening, cargo operations, and marine logistics.\n\nHe began building his professional maritime experience through an industrial training placement with the Nigerian Maritime Administration and Safety Agency (NIMASA), Lagos, where he served as a Maritime Intern from February to July 2021. During his internship, he supported the processing of vessel manifests and statutory 3% Sea Protection Levy, participated in vessel inspections to verify compliance with maritime safety regulations, and assisted in the issuance of vessel clearance certificates, gaining practical exposure to maritime administration, regulatory compliance, and vessel documentation.\n\nHe has continued to strengthen his professional competence through extensive maritime, safety, security, and professional development training. His maritime qualifications include STCW Basic Safety Training, Crew Security Awareness with Designated Duties under the ISPS Code, Efficient Deck-Hand certification, Watchkeeping (STCW Regulation II/4) Certificate of Competency, and Proficiency in Survival Craft and Rescue Boats (PSCRB). He has also completed training in Health, Safety and Environment (HSE) Levels 1–3, Human Resource Management, Strategic Human Resource Management, Digital Communication, and Artificial Intelligence for Human Resource Management, alongside his National Youth Service Corps (NYSC) Certificate.\n\nOdianosen is the Founder and Managing Lead of O'Nelsons Marine Consulting Services, a marine-focused venture providing services relating to vessel sales and hire, container sales and hire, tugboats, barges, houseboats, and responsible disposal of scrap machinery and marine equipment.\n\nBeyond his professional engagements, he is committed to leadership, youth development, and strengthening the network of graduates of the Nigerian Maritime University. He currently serves as the Assistant Secretary of the NMU Pioneer Alumni Association, contributing to administrative coordination, stakeholder engagement, and initiatives aimed at promoting the welfare, unity, and advancement of alumni members.\n\nHe is passionate about excellence, integrity, continuous learning, professional development, and the growth of Nigeria's maritime industry, with a vision of contributing meaningfully to the future of the sector.",
     category: "executive",
   },
 
   // ===== 4. TREASURY =====
+  {
+    id: "wereyesigha-michael",
+    name: "Wereyesigha Michael",
+    title: "Treasurer",
+    profession: "Businessman | Entrepreneur",
+    tenure: "2026 – 2028",
+    image: Wereyesigha,
+    rank: "6",
+    shortBio:
+      "Dedicated businessman committed to excellence, growth, and creating value. Serves as Treasurer of the NMU Alumni Association.",
+    fullBio:
+      "My name is Dickson, and I am a dedicated businessman with a strong passion for entrepreneurship, growth, and creating opportunities. Over the years, I have developed a deep appreciation for hard work, integrity, and the value of building meaningful relationships. I am committed to excellence in every endeavor and continually seek ways to expand my knowledge, improve my skills, and contribute positively to society.\n\nBeyond business, I believe in giving back to my community and supporting initiatives that bring people together and create lasting impact. My vision is to build successful ventures, inspire others through my journey, and leave a legacy of service, leadership, and positive change.",
+    category: "executive",
+  },
   {
     id: "confidence-onuoha",
     name: "Confidence Onuoha",
@@ -112,7 +127,7 @@ export const allMembers: MemberProfile[] = [
     profession: "Petroleum & Gas Engineer | Financial Advisor",
     tenure: "2026 – 2028",
     image: confidence,
-    rank: "6",
+    rank: "7",
     shortBio:
       "Petroleum and Gas Engineering graduate and pioneer student of NMU. Financial Advisor at AIICO Insurance PLC and Assistant Treasurer of the NMU Alumni Organization.",
     fullBio:
@@ -129,7 +144,7 @@ export const allMembers: MemberProfile[] = [
       "Tax Professional | Public Finance Practitioner | Legislative & Fiscal Policy Professional",
     tenure: "2026 – 2028",
     image: philemon,
-    rank: "7",
+    rank: "8",
     shortBio:
       "Tax and public sector professional with experience across tax administration, public finance, legislative affairs and fiscal reform.",
     fullBio:
@@ -143,7 +158,7 @@ export const allMembers: MemberProfile[] = [
     profession: "Data Analyst | Communications Professional",
     tenure: "2026 – 2028",
     image: betty,
-    rank: "8",
+    rank: "9",
     shortBio:
       "First-Class graduate of Port Management. Data Analyst, Social Media Manager, and communications professional serving as Director of Communication and Media.",
     fullBio:
@@ -157,7 +172,7 @@ export const allMembers: MemberProfile[] = [
     profession: "Petroleum & Gas Engineer | Field Engineer",
     tenure: "2026 – 2028",
     image: kenny,
-    rank: "9",
+    rank: "10",
     shortBio:
       "Petroleum and Gas Engineering graduate and multidisciplinary professional with experience spanning engineering, technology, innovation, and community leadership.",
     fullBio:
@@ -171,7 +186,7 @@ export const allMembers: MemberProfile[] = [
     profession: "Marine Geology | Regional Lead (North)",
     tenure: "2026 – 2028",
     image: kuye,
-    rank: "10",
+    rank: "11",
     shortBio:
       "Marine Geology graduate of Nigeria Maritime University and Regional Lead (North) at Neo Urban Gas and Power. Specializes in business development, stakeholder engagement, and strategic partnerships.",
     fullBio:
@@ -185,7 +200,7 @@ export const allMembers: MemberProfile[] = [
     profession: "Project Manager | Entrepreneur",
     tenure: "2026 – 2028",
     image: akhabue,
-    rank: "11",
+    rank: "12",
     shortBio:
       "Project Manager, Talent Manager, entrepreneur, and business leader. Owner of Shop Lure Essentials.",
     fullBio:
@@ -199,7 +214,7 @@ export const allMembers: MemberProfile[] = [
     profession: "Software Engineer | Digital Platforms",
     tenure: "2026 – 2028",
     image: joshua,
-    rank: "12",
+    rank: "13",
     shortBio:
       "Software engineer and Director of Database Management. Builds the digital platforms and member database that the NMU Alumni Association operates on, and supports operational work including mentorship.",
     fullBio:
@@ -213,7 +228,7 @@ export const allMembers: MemberProfile[] = [
     profession: "Mechanical Engineer",
     tenure: "2026 – 2028",
     image: bashua,
-    rank: "13",
+    rank: "14",
     shortBio:
       "Mechanical Engineering graduate with a strong passion for innovation, research, and problem-solving.",
     fullBio:
@@ -229,7 +244,7 @@ export const allMembers: MemberProfile[] = [
     profession: "Geologist | GIS Professional | SDGs Advocate",
     tenure: "2026 – 2028",
     image: marvelous,
-    rank: "14",
+    rank: "15",
     shortBio:
       "Pioneer graduate with First Class Honours in Marine Geology. Assistant Director of Institutional Advancement & Development.",
     fullBio:
@@ -243,7 +258,7 @@ export const allMembers: MemberProfile[] = [
     profession: "Community Leader | Agripreneur",
     tenure: "2026 – 2028",
     image: john,
-    rank: "15",
+    rank: "16",
     shortBio:
       "Dedicated community leader, agripreneur, and technology enthusiast serving as Assistant Director of Welfare.",
     fullBio:
@@ -257,26 +272,12 @@ export const allMembers: MemberProfile[] = [
     profession: "Metering Engineer | Petroleum & Gas Engineer",
     tenure: "2026 – 2028",
     image: Chidimma,
-    rank: "16",
+    rank: "17",
     shortBio:
       "Petroleum and Gas Engineer with experience in crude oil metering, custody transfer operations, hydrocarbon measurement, and production support.",
     fullBio:
       "Ezekwe Chidimma Cynthia is a Petroleum and Gas Engineer with practical experience in crude oil metering operations, hydrocarbon measurement systems, and custody transfer processes within the Nigerian oil and gas industry. She holds a Bachelor of Engineering (B.Eng.) degree in Petroleum and Gas Engineering from the Nigeria Maritime University.\n\nCurrently serving as a Metering Engineer with SeaQuest Upstream Service Limited, working on the Heirs Energy field, Chidimma is responsible for operating and maintaining LACT systems to ensure the accurate measurement and transfer of crude oil. A member of the Society of Petroleum Engineers (SPE), she is passionate about continuous learning, professional development, and contributing to safe and efficient energy operations.",
     category: "directors",
-  },
-  {
-    id: "wereyesigha-michael",
-    name: "Wereyesigha Michael",
-    title: "Tresurer",
-    profession: "Businessman | Entrepreneur",
-    tenure: "2026 – 2028",
-    image: Wereyesigha,
-    rank: "17",
-    shortBio:
-      "Dedicated businessman committed to excellence, growth, and creating value.",
-    fullBio:
-      "My name is Dickson, and I am a dedicated businessman with a strong passion for entrepreneurship, growth, and creating opportunities. Over the years, I have developed a deep appreciation for hard work, integrity, and the value of building meaningful relationships. I am committed to excellence in every endeavor and continually seek ways to expand my knowledge, improve my skills, and contribute positively to society.\n\nBeyond business, I believe in giving back to my community and supporting initiatives that bring people together and create lasting impact. My vision is to build successful ventures, inspire others through my journey, and leave a legacy of service, leadership, and positive change.",
-    category: "executive",
   },
 
   // ===== 7. PROVOST MARSHAL =====
@@ -308,6 +309,20 @@ export const allMembers: MemberProfile[] = [
       "Graduate of Marine Economics and Finance with a passion for continuous learning and personal development.",
     fullBio:
       "My name is Gloria Godwill, a graduate of Marine Economics and Finance with a passion for continuous learning and personal development. I enjoy reading, acquiring new skills, and exploring opportunities for growth both personally and professionally.\nI recently completed my National Youth Service Corps (NYSC) program, which provided me with valuable experiences in leadership, teamwork, and community service. I am eager to build a successful career, make meaningful contributions in my field, and continue developing my knowledge and skills.\nI am excited to be part of this alumni community, reconnecting with old friends, sharing experiences, and creating opportunities for networking, collaboration, and growth.",
+    category: "members",
+  },
+  {
+    id: "anuoluwapo-enitan-popoola",
+    name: "Anuoluwapo Enitan Popoola",
+    title: "Assistant Director of Communication and Media",
+    profession: "Program Strategy & Execution | MERL",
+    tenure: "—",
+    image: anuoluwapo,
+    rank: "20",
+    shortBio:
+      "Program strategy and execution support practitioner at Mastercard Foundation, with experience in MERL, impact delivery, data and insights, and stakeholder engagement. Marine Geology graduate of Nigeria Maritime University.",
+    fullBio:
+      "Anuoluwapo Enitan Popoola is a program strategy and execution support practitioner at Mastercard Foundation with experience in Monitoring, Evaluation, Research and Learning (MERL), impact delivery, data and insights generation, stakeholder engagement, and ecosystem intelligence.\n\nA graduate of Marine Geology from the Nigeria Maritime University, he has contributed to initiatives that leverage evidence, research, and learning to strengthen program effectiveness and drive measurable outcomes for young people across Africa. His work spans program performance tracking, strategic planning, knowledge generation, and cross-functional collaboration, translating insights into actionable solutions that inform decision-making and enhance impact.\n\nPassionate about youth empowerment, sustainable development, and continuous learning, he is committed to helping individuals and institutions unlock potential, achieve meaningful results, and create lasting positive change.",
     category: "members",
   },
 ];
