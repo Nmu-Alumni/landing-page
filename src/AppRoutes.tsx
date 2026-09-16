@@ -20,6 +20,7 @@ import Jobs from "./pages/jobs/Jobs";
 import BusinessDirectory from "./pages/business-directory/BusinessDirectory";
 import BusinessDetail from "./pages/business-detail/BusinessDetail";
 import ProtectedRoute from "./components/protected-route/ProtectedRoute";
+import Leadership from "./pages/leadership/Leadership";
 
 const AppRoutes = () => {
   return (
@@ -53,6 +54,7 @@ const AppRoutes = () => {
         <Route path="/mentorship" element={<Mentorship />} />
         <Route path="/directory" element={<Directory />} />
         <Route path="/jobs" element={<Jobs />} />
+        <Route path="/leaderships" element={<Leadership />} />
         <Route path="/business-directory" element={<BusinessDirectory />} />
         <Route path="/business-directory/:id" element={<BusinessDetail />} />
 

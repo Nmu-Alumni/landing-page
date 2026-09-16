@@ -195,7 +195,7 @@ export const allMembers: MemberProfile[] = [
   {
     id: "omeonu-joshua",
     name: "Omeonu Joshua",
-    title: "Director of Database Management",
+    title: "Director of Membership & Database Management",
     profession: "Software Engineer | Digital Platforms",
     tenure: "2026 – 2028",
     image: joshua,
