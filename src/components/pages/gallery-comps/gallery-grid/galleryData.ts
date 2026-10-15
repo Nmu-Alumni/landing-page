@@ -1,88 +1,117 @@
 import type { GalleryImage } from "../../../../types";
+import img01 from "../../../../assets/images/gallery/gallery-01.jpg";
+import img02 from "../../../../assets/images/gallery/gallery-02.jpg";
+import img03 from "../../../../assets/images/gallery/gallery-03.jpg";
+import img04 from "../../../../assets/images/gallery/gallery-04.jpg";
+import img05 from "../../../../assets/images/gallery/gallery-05.jpg";
+import img06 from "../../../../assets/images/gallery/gallery-06.jpg";
+import img07 from "../../../../assets/images/gallery/gallery-07.jpg";
+import img08 from "../../../../assets/images/gallery/gallery-08.jpg";
+import img09 from "../../../../assets/images/gallery/gallery-09.jpg";
+import img10 from "../../../../assets/images/gallery/gallery-10.jpg";
+import img11 from "../../../../assets/images/gallery/gallery-11.jpg";
+import img12 from "../../../../assets/images/gallery/gallery-12.jpg";
+import img13 from "../../../../assets/images/gallery/gallery-13.jpg";
+import img14 from "../../../../assets/images/gallery/gallery-14.jpg";
+import img15 from "../../../../assets/images/gallery/gallery-15.jpg";
+import img16 from "../../../../assets/images/gallery/gallery-16.jpg";
 
 export const GALLERY: GalleryImage[] = [
   {
     id: "1",
-    src: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1000&q=80",
-    caption: "Cadets collaborating on a group project in the library",
-    category: "Campus Life",
-    date: "Mar 2026",
+    src: img14,
+    caption: "Cadets in ceremonial whites salute in front of the Admin Block",
+    category: "Events",
   },
   {
     id: "2",
-    src: "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=1000&q=80",
-    caption: "A maritime law lecture in session",
-    category: "Campus Life",
-    date: "Feb 2026",
+    src: img15,
+    caption: "A senior naval officer greets the cadet guard during an inspection",
+    category: "Events",
   },
   {
     id: "3",
-    src: "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=1000&q=80",
-    caption: "Cadets researching in the campus library",
-    category: "Campus Life",
-    date: "Mar 2026",
+    src: img03,
+    caption: "Two cadets with their anchor-and-helm awards at dinner night",
+    category: "Events",
   },
   {
     id: "4",
-    src: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1000&q=80",
-    caption: "Class of 2016 alumni catching up at the ten-year reunion",
-    category: "Reunions",
-    date: "Nov 2025",
+    src: img04,
+    caption: "A cadet on the red carpet at the Regimental Dinner Night 2024",
+    category: "Events",
+    date: "2024",
   },
   {
     id: "5",
-    src: "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1000&q=80",
-    caption: "Inter-house cycling race, founders' week sports gala",
-    category: "Sports",
-    date: "Apr 2026",
+    src: img02,
+    caption: "Cadets in mess dress seated at the regimental dinner",
+    category: "Events",
   },
   {
     id: "6",
-    src: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1000&q=80",
-    caption: "Graduates tossing their caps at the close of convocation",
-    category: "Graduation",
-    date: "Dec 2025",
+    src: img05,
+    caption: "Female cadets in mess dress on the parade ground",
+    category: "Events",
   },
   {
     id: "7",
-    src: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1000&q=80",
-    caption: "Alumni networking mixer at the Maritime Career Fair",
+    src: img06,
+    caption: "Two cadets in white mess jackets and gold cummerbunds",
     category: "Events",
-    date: "Nov 2025",
   },
   {
     id: "8",
-    src: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=1000&q=80",
-    caption: "Guest industry talk during Alumni Career Week",
+    src: img07,
+    caption: "A cadet in mess dress by the flagpoles on the parade ground",
     category: "Events",
-    date: "Jan 2026",
   },
   {
     id: "9",
-    src: "https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=1000&q=80",
-    caption: "Swimming finals at the founders' week sports gala",
-    category: "Sports",
-    date: "Apr 2026",
+    src: img13,
+    caption: "Cadets standing by at a ceremony on the parade ground",
+    category: "Events",
   },
   {
     id: "10",
-    src: "https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?auto=format&fit=crop&w=1000&q=80",
-    caption: "The main campus building decorated for convocation week",
+    src: img08,
+    caption: "Two cadets in full ceremonial whites with gold aiguillettes",
     category: "Graduation",
-    date: "Dec 2025",
   },
   {
     id: "11",
-    src: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1000&q=80",
-    caption: "Panel discussion at the Delta Waterways Forum",
-    category: "Events",
-    date: "Dec 2025",
+    src: img09,
+    caption: "Cadets outside the Marine Engineering Department",
+    category: "Campus Life",
   },
   {
     id: "12",
-    src: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1000&q=80",
-    caption: "Marine engineering seminar in the campus lecture hall",
+    src: img10,
+    caption: "The cadet band rehearsing with trombones and drums",
     category: "Campus Life",
-    date: "Feb 2026",
+  },
+  {
+    id: "13",
+    src: img01,
+    caption: "Cadets in blue working uniform on campus",
+    category: "Campus Life",
+  },
+  {
+    id: "14",
+    src: img12,
+    caption: "A cadet in service whites by the flagpoles at the main entrance",
+    category: "Campus Life",
+  },
+  {
+    id: "15",
+    src: img16,
+    caption: "A cadet in service whites and beret at a parade",
+    category: "Campus Life",
+  },
+  {
+    id: "16",
+    src: img11,
+    caption: "A familiar face around campus",
+    category: "Campus Life",
   },
 ];

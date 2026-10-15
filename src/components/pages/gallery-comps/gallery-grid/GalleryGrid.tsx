@@ -106,7 +106,8 @@ const GalleryGrid = ({ images }: Props) => {
             <div className={styles.lightboxCaption}>
               <p>{active.caption}</p>
               <span>
-                {active.category} · {active.date}
+                {active.category}
+                {active.date && ` · ${active.date}`}
               </span>
             </div>
           </div>

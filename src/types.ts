@@ -75,7 +75,7 @@ export interface GalleryImage {
   src: string;
   caption: string;
   category: GalleryCategory;
-  date: string;
+  date?: string;
 }
 
 export interface SpotlightPerson {
