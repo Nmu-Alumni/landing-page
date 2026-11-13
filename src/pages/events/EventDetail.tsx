@@ -1,3 +1,4 @@
+import Loader from "../../components/ui/loader/Loader";
 import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
@@ -40,11 +41,26 @@ function EventDetailContent() {
   return <section className={styles.events}><div className={styles.container}>
     <div className={styles.controls}><Link to="/events">All events</Link><Link to="/events/my-events">My events</Link></div>
     {missing ? <div><h1>Event unavailable</h1><p>This event may have been unpublished or removed.</p></div> : <>
-      {(isLoading || detail.isPending) && <p role="status">Loading event...</p>}
+      {(isLoading || detail.isPending) && <Loader label="Loading event..." />}
       {detail.isError && <p role="alert">{detail.error.message} <button onClick={() => void detail.refetch()}>Try again</button></p>}
       {event && !detail.isError && <article className={styles.detail}>
-        {safeEventUrl(event.coverImageUrl) && <img className={styles.cover} src={safeEventUrl(event.coverImageUrl)} alt={event.title} />}
-        <div className={styles.header}><h1>{event.title}</h1><p>{eventTypes[event.type] ?? "Event"} · {event.format} · {eventStarted(event, now) ? "Past" : "Upcoming"}</p></div>
+        <header className={`${styles.detailHero} ${!safeEventUrl(event.coverImageUrl) ? styles.noCover : ""}`}>
+          <div className={styles.detailIntro}>
+            <span className={styles.eyebrow}>{eventTypes[event.type] ?? "Alumni event"}</span>
+            <h1>{event.title}</h1>
+            <p>{eventDate(event.startDate)} &middot; {event.format} &middot; {eventStarted(event, now) ? "Past event" : "Upcoming event"}</p>
+            <a href="#event-information" className={styles.detailJump}>Discover the event <span aria-hidden="true">↓</span></a>
+          </div>
+          {safeEventUrl(event.coverImageUrl) && <figure className={styles.coverFrame}><img className={styles.cover} src={safeEventUrl(event.coverImageUrl)} alt={event.title} /></figure>}
+        </header>
+        <div className={styles.detailBody} id="event-information">
+        <div className={styles.eventOverview}>
+        <span className={styles.eyebrow}>01 / The gathering</span>
+        <h2>About this event</h2>
+        <p className={styles.description}>{event.description || "Further event information will be shared by the organizer."}</p>
+        </div>
+        <aside className={styles.eventInformation} aria-label="Event information and registration">
+        <span className={styles.eyebrow}>Plan your visit</span>
         <dl className={styles.facts}>
           <dt>Starts</dt><dd>{eventDate(event.startDate)} at {eventDate(event.startDate, true)} WAT (Africa/Lagos)</dd>
           {event.endDate && <><dt>Ends</dt><dd>{eventDate(event.endDate)} at {eventDate(event.endDate, true)} WAT</dd></>}
@@ -55,19 +71,20 @@ function EventDetailContent() {
           <dt>Registrations</dt><dd>{event.registeredCount}</dd>
           <dt>Availability</dt><dd>{event.spotsLeft === null ? "Unlimited capacity" : `${event.spotsLeft} spots left`}</dd>
         </dl>
-        {event.description && <p className={styles.description}>{event.description}</p>}
         <div className={styles.actions}>
-          {user && !isDemo && registered === undefined && <p role="status">{mine.isError ? "Could not confirm your registration status." : "Checking your registration..."}</p>}
+          {user && !isDemo && registered === undefined && <>{mine.isError ? <p role="status">Could not confirm your registration status.</p> : <Loader inline label="Checking your registration..." />}</>}
           {mine.isError && <p role="alert">{mine.error.message} <button onClick={() => void mine.refetch()}>Retry registration check</button></p>}
           {registered && <p>You are registered for this event.</p>}
           {!registered && event.openTo === "invite" && <p>This event is by invitation only.</p>}
           {!registered && eventStarted(event, now) && <p>Registration is closed because this event has started.</p>}
           <button onClick={() => void perform()} disabled={action.isPending || isLoading || (!!user && !isDemo && registered === undefined) || (registered !== true && (eventStarted(event, now) || event.spotsLeft === 0 || event.openTo === "invite"))}>
-            {action.isPending ? "Updating registration..." : registered ? "Cancel registration" : !user || isDemo ? "Log in to register" : "Register for event"}
+            {action.isPending ? <Loader inline label="Updating registration..." /> : registered ? "Cancel registration" : !user || isDemo ? "Log in to register" : "Register for event"}
           </button>
           {!registered && event.spotsLeft === 0 && <p>This event is full.</p>}
           <p role="status" aria-live="polite">{feedback}</p>
           {action.isError && <p role="alert">{action.error.message}</p>}
+        </div>
+        </aside>
         </div>
       </article>}
     </>}

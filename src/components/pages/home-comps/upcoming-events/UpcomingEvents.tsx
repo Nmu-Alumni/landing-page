@@ -1,3 +1,4 @@
+import Loader from "../../../ui/loader/Loader";
 import { Link } from "react-router";
 import { Anchor, MapPin } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
@@ -12,7 +13,7 @@ export default function UpcomingEvents() {
     <div className={styles.motif} aria-hidden="true"><Anchor size={400} /></div>
     <div className={styles.container}>
       <h2 className={styles.heading}>Reunions, Seminars &amp; Maritime Summits</h2>
-      {query.isPending && <p role="status">Loading upcoming events...</p>}
+      {query.isPending && <Loader label="Loading upcoming events..." />}
       {query.isError && <p role="alert">{query.error.message} <button onClick={() => void query.refetch()}>Try again</button></p>}
       {query.isSuccess && !query.data.events.length && <p>No upcoming events at the moment.</p>}
       <div className={styles.grid}>{query.data?.events.map(event => <div key={event._id} className={styles.card}>
