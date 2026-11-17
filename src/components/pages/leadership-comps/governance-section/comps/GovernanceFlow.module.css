@@ -1,0 +1,116 @@
+.flow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 115px;
+  height: 90px;
+
+  background: #edf3fb;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  flex-shrink: 0;
+}
+
+.card h3 {
+  margin: 0;
+  color: #082c5b;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.card span {
+  margin-top: 8px;
+  color: #7d93b2;
+  font-size: 15px;
+}
+
+.active {
+  background: #082c5b;
+}
+
+.active h3 {
+  color: #d4ab32;
+}
+
+.active span {
+  color: white;
+}
+
+.lineGold {
+  width: 40px;
+  height: 2px;
+  background: #d4ab32;
+}
+
+.lineGray {
+  width: 40px;
+  height: 2px;
+  background: #d7dfe9;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.branch {
+  width: 22px;
+  height: 70px;
+
+  border-left: 2px solid #d7dfe9;
+
+  border-top: 2px solid #d7dfe9;
+
+  border-bottom: 2px solid #d7dfe9;
+
+  margin-left: 18px;
+  margin-right: 10px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (max-width:900px) {
+
+.flow{
+flex-direction:column;
+gap:20px;
+}
+
+.lineGold,
+.lineGray,
+.branch{
+display:none;
+}
+
+.column{
+flex-direction:row;
+}
+
+}
+
+@media (max-width:600px){
+
+.column{
+flex-direction:column;
+}
+
+.card{
+width:100%;
+max-width:260px;
+}
+
+}

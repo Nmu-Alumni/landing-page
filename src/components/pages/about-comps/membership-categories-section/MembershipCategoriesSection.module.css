@@ -1,0 +1,44 @@
+.table {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+  border: 1px solid rgba(10, 37, 64, 0.16);
+  background: #fff;
+}
+.tier { display: flex; flex-direction: column; padding: 32px 30px 30px; border-left: 1px solid rgba(10, 37, 64, 0.12); color: var(--primary); }
+.tier:first-child { border-left: 0; }
+.tier h3 { font-family: "Poppins", sans-serif; font-size: 22px; font-weight: 600; letter-spacing: -0.02em; }
+.who { margin: 12px 0 0; font-size: 14px; line-height: 1.65; color: #4a5b6c; min-height: 7.5em; }
+
+.price { margin-top: 24px; padding: 18px 0; min-height: 124px; align-content: start; border-block: 1px solid rgba(10, 37, 64, 0.12); display: grid; gap: 2px; }
+.priceLabel { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #6b7a89; }
+.price strong { font-family: "Poppins", sans-serif; font-size: 30px; font-weight: 600; letter-spacing: -0.03em; }
+.price small { font-size: 12px; color: #6b7a89; }
+
+.benefits { list-style: none; margin: 20px 0 0; padding: 0; display: grid; gap: 10px; }
+.benefits li { position: relative; padding-left: 22px; font-size: 14px; line-height: 1.5; }
+.benefits li::before { content: ""; position: absolute; left: 0; top: 0.55em; width: 10px; height: 6px; border-left: 1.5px solid #876a1f; border-bottom: 1.5px solid #876a1f; transform: rotate(-45deg) translateY(-2px); }
+.note { margin: 16px 0 0; font-size: 13px; color: #6b7a89; }
+
+.action { margin-top: auto; padding-top: 28px; }
+.cta {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 18px; font-size: 14px; font-weight: 600; text-decoration: none;
+  color: #fff; background: var(--primary); border-radius: 4px;
+  transition: background 0.15s ease;
+}
+.cta:hover { background: #163a5f; }
+.cta span { transition: transform 0.15s ease; }
+.cta:hover span { transform: translateX(3px); }
+.footnote { margin: 0; font-size: 13px; line-height: 1.5; padding: 14px 0 0; border-top: 1px solid rgba(230, 207, 143, 0.3); color: #e6cf8f; }
+
+.honorary { background: var(--primary); color: #fff; border-left-color: var(--primary); }
+.honorary .who, .honorary .note, .honorary .price small, .honorary .priceLabel { color: rgba(255, 255, 255, 0.72); }
+.honorary .price { border-color: rgba(255, 255, 255, 0.16); }
+.honorary .price strong { color: #e6cf8f; }
+.honorary .benefits li::before { border-color: #e6cf8f; }
+
+@media (max-width: 960px) {
+  .table { grid-template-columns: 1fr; }
+  .tier { border-left: 0; border-top: 1px solid rgba(10, 37, 64, 0.12); padding: 28px 22px; }
+  .tier:first-child { border-top: 0; }
+  .who, .price { min-height: 0; }
+}

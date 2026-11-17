@@ -1,0 +1,57 @@
+.section {
+  padding: 5rem 0;
+  background-color: var(--accent);              /* #C9A84C */
+  position: relative;
+  overflow: hidden;
+}
+
+/* decorative glow blob */
+.glow {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translate(25%, 25%);
+  width: 24rem;
+  height: 24rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+  filter: blur(3rem);
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 10;
+  text-align: center;
+}
+
+.heading {
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--primary);                        /* #0A2540 */
+  margin-bottom: 1.5rem;
+}
+
+.body {
+  /* accent-foreground would be #fff, so use primary with alpha instead */
+  color: color-mix(in srgb, var(--primary) 80%, transparent);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  max-width: 40rem;
+  margin: 0 auto 2.5rem;
+  font-weight: 500;
+}
+
+.btn {
+  background-color: var(--primary);            /* #0A2540 */
+  color: var(--primary-foreground);            /* #ffffff */
+  font-size: 1.125rem;
+  height: 3.5rem;
+  padding: 0 2.5rem;
+}
+
+.btn:hover {
+  background-color: color-mix(in srgb, var(--primary) 85%, black);
+}

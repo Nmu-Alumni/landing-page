@@ -1,0 +1,35 @@
+﻿.heroFeature { margin:0 0 40px; border-left:1px solid rgba(230,207,143,.5); padding-left:16px; }
+.featureImageLink { display:block; overflow:hidden; }
+.featureImageLink img { display:block; width:100%; aspect-ratio:16/9; object-fit:cover; }
+.featuredContent { padding:24px 0 0; }
+.featuredBadge { display:block; font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.13em; color:#e6cf8f; margin-bottom:14px; }
+.featuredContent h2 { font-size:24px; font-weight:600; line-height:1.35; letter-spacing:-.025em; }
+.featuredContent h2 a { color:white; text-decoration:none; }
+.featuredContent h2 a:hover { color:#e6cf8f; }
+.featuredContent p { margin:14px 0; font-size:14px; line-height:1.7; color:rgba(255,255,255,.8); }
+.featuredMeta { display:flex; flex-wrap:wrap; gap:8px 16px; color:#e6cf8f; font-size:12px; line-height:1.6; }
+.controls { background:white; border-top:1px solid #dce2e7; border-bottom:1px solid #dce2e7; }
+.controlsInner { max-width:1280px; margin:0 auto; padding:20px 40px; display:flex; flex-wrap:wrap; gap:20px; align-items:center; }
+.searchWrap { position:relative; flex:1 1 240px; min-width:0; }
+.searchIcon { position:absolute; left:14px; top:50%; transform:translateY(-50%); color:#4a5b6c; pointer-events:none; }
+.searchInput { width:100%; padding:12px 16px 12px 42px; border:1px solid #dce2e7; border-radius:4px; font-size:14px; background:#f7f8f6; }
+.tabs { display:flex; gap:4px; flex-wrap:wrap; }
+.tab { padding:12px 14px; border:0; border-bottom:2px solid transparent; background:transparent; color:#4a5b6c; font-size:13px; font-weight:500; cursor:pointer; white-space:nowrap; }
+.tab:hover,.tabActive { color:var(--primary); border-bottom-color:var(--accent); }
+.tabActive { font-weight:600; }
+.section { padding:40px 0 80px; }
+.container { max-width:1280px; margin:0 auto; padding:0 40px; }
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr)); gap:28px; }
+.empty { text-align:center; padding:48px 16px; color:#4a5b6c; }
+.empty button { margin-top:16px; padding:12px 20px; background:var(--primary); color:white; border:0; border-radius:4px; font-weight:600; cursor:pointer; }
+@media(max-width:860px) {
+  .heroFeature { border:0; padding:0; margin-bottom:32px; }
+  .controlsInner { padding:16px 20px; }
+  .container { padding:0 20px; }
+}
+@media(max-width:700px) {
+  .controlsInner { flex-direction:column; align-items:stretch; gap:12px; }
+  .searchWrap { flex:auto; }
+  .tabs { flex-wrap:nowrap; overflow-x:auto; }
+  .grid { grid-template-columns:1fr; }
+}

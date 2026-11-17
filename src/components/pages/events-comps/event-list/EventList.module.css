@@ -1,0 +1,33 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 380px));
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Large Tablets */
+
+@media (max-width: 1024px) {
+  .grid {
+    gap: 24px;
+  }
+}
+
+/* Tablets */
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: minmax(0, 380px);
+    gap: 24px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+  .grid {
+    gap: 20px;
+  }
+}
